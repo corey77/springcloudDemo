@@ -1,0 +1,42 @@
+server:
+  port: 8801
+  context-path: /user
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dfdq?charset=utf8mb4
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  application:
+    name: corey-comsumer-user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaservera:8761/eureka/,http://eurekaserverb:8762/eureka/
+
+val1: clientC
+
+org:
+  quartz:
+    scheduler:
+      instancename: coreyquartzscheduler
+      instanceid: auto
+    threadpool:
+      class: org.quartz.simpl.simplethreadpool
+      threadcount: 25
+      threadpriority: 5
+    dataSource:
+      quartzDS:
+        driver: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/quartz?useUnicode=true&characterEncoding=UTF8&allowmultiqueries=true
+        user: root
+        password: 123456
+        maxConnections: 5
+        validationquery: select 0 from dual
+#jobTasks:
+#  jobTask:
+#  - jobTaskDetail:
+#      targetBeanName: testService
+#      targetMethodName : test2
+#    cronexpression: 0/10 * * * * ?

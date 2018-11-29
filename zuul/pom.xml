@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springCloud-demo</artifactId>
+        <groupId>springCloud-demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>springCloud-demo</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>zuul</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-dependencies</artifactId>
+            <version>1.4.6.RELEASE</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.netflix.zuul/zuul-core -->
+        <dependency>
+            <groupId>com.netflix.zuul</groupId>
+            <artifactId>zuul-core</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure -->
+        <!--<dependency>-->
+            <!--<groupId>springCloud-demo</groupId>-->
+            <!--<artifactId>api</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-zuul</artifactId>-->
+            <!--<version>1.3.5.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-zuul &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-zuul</artifactId>-->
+            <!--<version>1.4.6.RELEASE</version>-->
+        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zuul -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.netflix.archaius/archaius-core -->
+        <dependency>
+            <groupId>com.netflix.archaius</groupId>
+            <artifactId>archaius-core</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.11</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+        <!-- 防止出现java.lang.NoSuchMethodError: com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z-->
+        <dependency>
+            <groupId>com.netflix.servo</groupId>
+            <artifactId>servo-core</artifactId>
+            <version>0.12.7</version>
+        </dependency>
+
+    </dependencies>
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<dependencies>-->
+                    <!--<dependency>-->
+                        <!--<groupId>org.springframework</groupId>-->
+                        <!--<artifactId>springloaded</artifactId>-->
+                        <!--<version>1.2.5.RELEASE</version>-->
+                    <!--</dependency>-->
+                <!--</dependencies>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
+</project>

@@ -1,0 +1,36 @@
+server:
+  port: 8700
+#server.context-path=/
+
+spring:
+  application:
+    name: corey-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekaservera:8761/eureka/,http://eurekaserverb:8762/eureka/
+#eureka.client.service-url.defaultZone=http://eurekaservera:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /corey/**
+      serviceId: COREY-PROVIDER-USER
+      #            url: http://localhost:8801/user
+      stripPrefix: true
+      sensitive-headers:
+#        api-b:
+#        path: /api-order/**
+#        service-id: service-consumer��
+
+#eureka.instance.prefer-ip-address=true
+
+#流程调度线程池中最小激活线程数量
+pool:
+  coreSize: 3
+  #流程调度线程池中最大激活线程数量
+  maxSize: 3
+  #流程调度线程池排队队列容量
+  queueCapacity: 10000
+  #流程调度线程池激活线程超时时间
+  keepAliveSeconds: 300

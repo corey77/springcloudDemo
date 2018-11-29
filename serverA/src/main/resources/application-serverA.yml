@@ -1,0 +1,8 @@
+val1: serverA
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eurekaservera
+  client:
+    service-url.defaultZone: http://eurekaserverb:8762/eureka/

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: serverA
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 30000
+logging:
+  file: /usr/logs
